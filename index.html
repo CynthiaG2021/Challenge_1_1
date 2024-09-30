@@ -1,28 +1,30 @@
-<!DOCTYPE html>
+
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link reel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    
     <title>Insurezella</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
-        body{
-            font-family: Poppins;
+        body {
+            font-family: 'Poppins', sans-serif;
             font-weight: 520;
         }
 
         .header {
             background-color: #0070f3;
             font-size: 13px;
+            margin-bottom: 15px;
+            height: auto;
         }
-         
+
         .header__title {
             font-size: 20px;
             margin-left: 18%;
@@ -37,19 +39,17 @@
             background-color: white;
             display: flex;
             height: 50px;
-            
-           
         }
 
         .header__title2 {
-              color:#0070f3
+            color: #0070f3;
         }
 
         .parrafo {
-            color:rgb(201, 156, 101);
+            color: rgb(201, 156, 101);
         }
 
-        .img_header{
+        .img_header {
             height: 50px;
             width: 50px;
             border-radius: 15%;
@@ -60,11 +60,17 @@
         .boton_header2 {
             border-radius: 17px !important;
             font-size: 13px !important;
-            font-family: Poppins !important;
+            font-family: 'Poppins', sans-serif !important;
             font-weight: 562;
-            background-color: blue  !important;
+            background-color: blue !important;
             margin-right: 5%;
-            
+            transition: background-color 0.5s ease, transform 0.5s ease;
+        }
+
+        .boton_header2:hover{
+            background-color: #c5def8;
+    transform: scale(1.1); 
+
         }
 
         .navbar-nav .nav-link {
@@ -77,83 +83,554 @@
             color: #137998; /* Color celeste al pasar el mouse */
             text-decoration: underline; /* Subraya el texto al pasar el mouse */
         }
-    
 
         .custom-container {
-    width: 100%; /* Ajusta el tamaño del contenedor */
-    max-width: 1200px; /* Fija un ancho máximo para que no ocupe todo el ancho */
-    margin: 40px auto; /* Centrar el contenedor y añadir margen superior */
-    display: flex; /* Usar flexbox para alinear contenido */
-    justify-content: space-between; /* Espacio entre los elementos */
-    padding: 0;
-    border: 1px solid #ddd;
-    background-color: #f8f9fa; /* Color de fondo */
+            width: 100%;
+            max-width: 1550px;
+            height: 470px;
+            margin: 40px auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            border: 1px solid #ddd;
+            background-color: rgb(220, 220, 220);
+            position: relative;
+            
+        }
+
+        .left-section {
+            background-color: rgb(220, 220, 220);
+            color: #0070f3;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .right-section {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-section img {
+            width: 100%;
+            height: 470px;
+        }
+
+        .title_section3 {  
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.6rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-left: 20%;
+            margin-top: 10%;
+            display: block;
+            background-color: rgb(220, 220, 220);
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .p_section3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.0rem;
+            margin-bottom: 25px;
+            margin-top: 5px;
+            line-height: 1.5;
+            color: rgb(158, 141, 119);
+            margin-left: 20%;
+        }
+
+        /* Ajustes para mover el botón a la derecha */
+        .button_section3_container {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 40%;
+            padding-top: 10px;
+        }
+
+        .button_section3 {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.5s ease, transform 0.5s ease;
+        }
+        
+        .button_section3:hover {        
+    background-color: #c5def8;
+    transform: scale(1.1); 
 }
 
-.left-section {
-    background-color: #dddbd8;
-    color: #0070f3;
-    width: 50%; /* Reduce el ancho para hacer espacio a la imagen */
-    padding: 20px;
+        
+
+        .section_options{
+            background-color: rgb(255, 255, 255);
+            width:100%;
+            max-width: 1000px;
+            height: 200px;
+            position: relative;
+            font-size: 15px;
+            
+        }
+
+
+        .col1{
+            width: 155px; 
+    height: 160px; 
+    background-color: #ffffff; 
+    border: 1px solid #ffffff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    border-radius: 3px; /* Bordes redondeados */
+    margin-top: 2%;
+    flex-direction: column;
+    text-align: center;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    margin-left: 10px;
+    
+    
+
+        }
+
+        .col1:hover {
+    background-color: #c5def8;
+    transform: scale(1.1); 
 }
 
-.right-section {
-    width: 50%; /* Reduce el ancho para que la imagen ocupe la mitad */
+        .col2 {
+            width: 155px; 
+    height: 160px; 
+    background-color: #ffffff; 
+    border: 1px solid #ffffff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    border-radius: 3px; /* Bordes redondeados */
+    margin-top: 2%;
+    flex-direction: column;
+    text-align: center;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    margin-left: 50px;
+        }
+
+        .col2:hover {
+    background-color: #c5def8;
+    transform: scale(1.1); 
+}
+
+        .col3 {
+            width: 155px; 
+    height: 160px; 
+    background-color: #ffffff; 
+    border: 1px solid #ffffff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    border-radius: 3px; /* Bordes redondeados */
+    margin-top: 2%;
+    flex-direction: column;
+    text-align: center;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    margin-left: 50px;
+        }
+
+        .col3:hover {
+    background-color: #c5def8;
+    transform: scale(1.1); 
+}
+
+
+        .col4{
+            width: 155px; 
+    height: 160px; 
+    background-color: #ffffff; 
+    border: 1px solid #ffffff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    border-radius: 3px; /* Bordes redondeados */
+    margin-top: 2%;
+    flex-direction: column;
+    text-align: center;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    margin-left: 50px;
+        }
+
+        .col4:hover {
+    background-color: #c5def8;
+    transform: scale(1.1); 
+}
+
+        .col5{
+            width: 155px; 
+    height: 160px; 
+    background-color: #ffffff; 
+    border: 1px solid #ffffff; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+    border-radius: 3px; /* Bordes redondeados */
+    margin-top: 2%;
+    flex-direction: column;
+    text-align: center;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    margin-left: 60px;
+        }
+
+        .col5:hover {
+    background-color: #c5def8;
+    transform: scale(1.1); 
+}
+
+
+.img_column{
+            height: 50px;
+            width: 50px;
+            border-radius: 15%;
+            margin-top: 7px;
+            margin-left: 7%;
+            margin-right: 7%;
+            margin-bottom: 7px;
+        }
+
+            .seccion5 {
+                background-color: white;
+                border: none;
+           
+
+           }
+
+        .right_section5 {
+            background-color: rgb(255, 255, 255);
+            width: 50%;
+            padding: 20px;
+            margin-right: 10%;
+        }
+
+
+        .left-section5 {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .left-section5 img {
+            width: 70%;
+            height: 450px;
+            background-color: white;
+            margin-left: 30%;
+            
+        }
+        .title_section5 {  
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.3rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-left: 20%;
+            margin-top: 5%;
+            display: block;
+            background-color: rgb(255, 255, 255);
+            color: #000000;
+            font-weight: bold;
+            margin-left: 60px;
+        }
+
+        .p_section5 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.0rem;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            line-height: 1.5;
+            color: rgb(170, 170, 170);
+            margin-left: 60px;
+        }
+
+        /* Ajustes para mover el botón a la derecha */
+        .button_section5_container {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 40%;
+            padding-top: 10px;
+            margin-right: 90px;
+            margin-top: 10%;
+            
+        }
+
+        .button_section5 {
+            padding: 10px 40px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            
+            transition: background-color 0.5s ease, transform 0.5s ease;
+        }
+        
+        .button_section5:hover {        
+    background-color: #c5def8;
+    transform: scale(1.1); 
+}
+
+.icon_seccion5 {
+    width: 40px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.img_titleseccion5 {
+    font-size: 12px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    line-height: 0.7;
+    
 }
 
-.right-section img {
-    width: 100%; /* Ancho específico para la imagen */
-    height: auto; /* Mantener proporción de la imagen */
+.img_medical5{
+    margin-left: 300px;
+    margin-top: -52px;
+    width: 6%;
+    
+
 }
 
-.title_section3 {
-    margin-top: 100px;
-    margin-left: 100px;
+.img_titlemedical5{
+  margin-top: -50px;
+}
+
+.card-img-custom {
+      width: 70px; /* Cambia el valor para ajustar el tamaño de la imagen */
+      height: 70px; /* Cambia el valor para ajustar el tamaño de la imagen */
+      object-fit: cover;
+      margin-top: 70px;
+      
+      
+      
+    }
+
+    .card-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0070f3;
+        margin: 5px 20px;
+    }
+
+    .col-md-4{
+        background-color: #c8dff7;
+        padding: 0;
+        margin: 0;
+        
+        
+        
+        
+    }
+
+
+    .card{
+        background-color: #dfecfb;
+        border: none;
+        width: 100%;
+        margin: 0;
+        
+       
+       px
+        
+        
+       
+    }
+
+    .card-text {
+        color: #a7a9aa;
+        font-size: 15px;
+        max-width: 300px;
+        margin: auto;
+       
+    }
+
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+        justify-content:center;
+    }
+
+
+       /*seccion 7 protecting people*/
+       .container7 { 
+    background-color: white;
+    border: none;
+    display: flex; /* Alinea las secciones lado a lado */
+    justify-content: space-between; /* Separa las dos secciones equitativamente */
+    align-items: center; /* Alinea verticalmente al centro */
+    padding: 20px;
+    
+}
+
+.right-section7 {
+    background-color: rgb(255, 255, 255);
+    width: 50%; /* Ocupar la mitad del contenedor */
+    padding: 20px;
+    margin-left: 15px;
+    
+}
+
+.left-section7 {
+    width: 50%; /* Ocupar la mitad del contenedor */
+    display: flex;
+    flex-direction: column; /* Alinea el contenido de forma vertical */
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.left-section7 img {
+    width: 75%; /* Ajustar la imagen al 100% del contenedor izquierdo */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin-left: 20%;
+}
+
+.title-section7 {  
     font-family: 'Poppins', sans-serif;
+    font-size: 2.3rem;
     font-weight: bold;
-    font-size: 40px;
+    margin-bottom: 30px;
+    color: #000000;
+    font-weight: bold;
+    margin-left: 0px;
+    
+    
 }
 
-.p_section3 {
+.p-section7 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.0rem;
+    margin-bottom: 25px;
     margin-top: 10px;
-    margin-left: 100px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600; /* Cambia a un valor válido */
-    font-size: 20px;
+    line-height: 1.5;
+    color: rgb(170, 170, 170);
+    font-weight: 450;
+    margin-left: 0px;
+    margin-right: 80px;
 }
 
-.button_section3 {
-    margin-left: 20px;
-    border-radius: 40%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600; /* Cambia a un valor válido */
-    font-size: 15px;
+.button_section7_container {
+    display: flex;
+    justify-content: flex-start; /* Alinear el botón a la izquierda dentro de la sección derecha */
+    margin-top: 30px;
+    margin-left: -15px;
 }
 
-     
+.button_section7 {
+    padding: 10px 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    width: 250px;
+    
+}
+
+.button_section7:hover {        
+    background-color: #c5def8;
+    transform: scale(1.1); 
+}
+
+
+.container8 {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas */
+    justify-content: center; /* Centra horizontalmente las tarjetas */
+    align-items: center;
+    padding: 20px; /* Espaciado interno del contenedor */
+}
+
+.card8 {
+    width: 400px; /* Ancho de las tarjetas */
+   
+    margin: 15px; /* Espacio entre tarjetas */
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.card {
+    border: none; /* Sin borde en las tarjetas */
+    transition: transform 0.3s; /* Suaviza el efecto al pasar el mouse */}
+    
+
+.card:hover {
+    transform: scale(1.05); /* Agranda la tarjeta al pasar el mouse */
+}
+
+.btn-compare {
+    display: flex;
+    bottom: 10px;
+    left: 10px;
+    background-color: #ffffff; /* Color de fondo del botón */
+    color: #007bff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 10px 20px; /* Espaciado interno */
+    transition: transform 0.3s; /* Suaviza el efecto al pasar el mouse */
+}
+
+.btn-compare:hover {
+    transform: scale(1.1); /* Agranda el botón al pasar el mouse */
+    background-color: #eeeff1; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.card-title8{
+    margin-left:100px;
+    margin-right: 100px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.card-text8{
+    color: #aeaaaa;
+    font-size:20px ;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.btn8{
+    color: #007bff;
+}
+
+
     </style>
 
 </head>
 <body>
     <div class="container-fluid text-white d-flex justify-content-between align-items-center header">
         <span class="header__title">Want to Connect with us?</span>
-        
         <div class="d-flex text-end contact">
-            <span class="m-3"><i class="fa-solid fa-envelope"></i>  Email us: support@insurezella.com</span>
-            <span class="m-3"><i class="fa-solid fa-phone"></i>  Call us: (877) 227 0774</span>
+            <span class="m-3"><i class="fa-solid fa-envelope"></i> Email us: support@insurezella.com</span>
+            <span class="m-3"><i class="fa-solid fa-phone"></i> Call us: (877) 227 0774</span>
         </div>
     </div>
-    
-        
+
     <div class="container-fluid text-white d-flex justify-content-between align-items-center header2">
-        <img class="img_header" src="images/logo.png" alt="logo insurezella"> 
-    
-        <!-- Barra de Navegación -->
+        <img class="img_header" src="images/logo.png" alt="logo insurezella">
         <nav class="navbar navbar-expand">
-            <div class="container-fluid d-flex justify-content-center"> <!-- Centrar la barra -->
+            <div class="container-fluid d-flex justify-content-center">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Home | </a>
@@ -170,27 +647,220 @@
                 </ul>
             </div>
         </nav>
-        
-        <button type="button" class="btn btn-primary boton_header2 ms-3">Call Us Now ➜</button> <!-- Añadido margen a la izquierda -->
+        <button type="button" class="btn btn-primary boton_header2 ms-3">Call Us Now ➜</button>
     </div>
 
-        
-    <div class="custom-container"> <!-- Contenedor con tamaño personalizado -->
-        <!-- Sección izquierda -->
+    <div class="custom-container">
         <div class="left-section">
             <h2 class="title_section3">YOUR GUIDE TO QUALITY COVERAGE</h2>
-            <p class="p_section3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, vero.</p>
-            <button type="button" class="btn btn-primary boton_header2 ms-3 button_section3">FIND PLANS</button>
+            <p class="p_section3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis magnam odit officia veniam non quo aspernatur dolorem sed adipisci, sunt deleniti molestiae culpa quam tempore debitis voluptas exercitationem alias.</p>
+
+            <!-- Contenedor para alinear el botón a la derecha -->
+            <div class="button_section3_container">
+                <button type="button" class="btn btn-primary boton_header2 ms-3 button_section3">FIND PLANS</button>
+            </div>
         </div>
-        <!-- Sección derecha -->
         <div class="right-section">
             <img src="images/hero-bg.jpg" alt="Imagen de familia feliz">
         </div>
     </div>
+
+
+   <!--seccion4--> 
+   <div class="container text-center section_options">
+    <div class="row row-cols-5 columns_options">
+      <div class="col1"><img class="img_column" src="images/health-insurance-icon.png" alt="logo insurezella">Health Insurance</div>
+      <div class="col2"><img class="img_column" src="images/medicare-advantage-icon.png" alt="logo insurezella">Medicare Supplement</div>
+      <div class="col3"><img class="img_column" src="images/medicare-icon.png" alt="logo insurezella">Medicare Advantage</div>
+      <div class="col4"><img class="img_column" src="images/obamacare-icon.png" alt="logo insurezella">Life insurance</div>
+      <div class="col5"><img class="img_column" src="images/short-term-icon.png" alt="logo insurezella">ACA obamacare</div>
+    </div>
+  </div>
+
+  <div class="custom-container seccion5">
+    <div class="left-section5">
+        <img src="images/committed-help.png" alt="Imagen de mujer feliz">
+    </div>
+    <div class="right_section5">
+        <h2 class="title_section5">Commited to help you find the right plan</h2>
+        <p class="p_section5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis magnam odit officia veniam non quo aspernatur dolorem sed adipisci, sunt deleniti molestiae culpa quam tempore debitis voluptas exercitationem alias.</p>
+        <div class="button_section5_container">
+            <button type="button" class="btn btn-primary boton_header5 ms-3 button_section5">ABOUT INSUZERELLA</button>
+        </div>
+        <div class="d-flex justify-content-start" style="margin-top: 40px; margin-left: 150px;"></div>
+            <!-- Primer conjunto de imagen y texto -->
+            <div class="d-flex align-items-start me-4">
+                <img class="icon_seccion5" src="images/obamacare-icon.png">
+                <div class="img_titleseccion5 ms-2">
+                    <span>Save Money</span><br>
+                    <span>Compare Plans</span>
+                </div>
+            </div>
+            
+            <!-- Segundo conjunto de imagen y texto -->
+            <div class="d-flex align-items-start">
+                <img class="icon_seccion5 img_medical5" src="images/medical-team.png">
+                <div class="img_titleseccion5 ms-2 img_titlemedical5">
+                    <span>Licensed</span><br>
+                    <span>Agents</span>
+                </div>
+        </div>
+        
+            </div>
+        </div>
+        
+        
+        
     
+    </div>
+    </div>
+ 
+ <div class="container-fluid mt-4">
+    <div class="row">
+      <!-- Tarjeta 1 -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <img src="images/health-insurance-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 1">
+          <div class="card-body">
+            <h5 class="card-title">Health Insurance</h5>
+            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut suscipit perspiciatis, omnis quo, ipsum atque, quaerat maiores eum architecto reiciendis eligendi alias eos voluptatibus! Debitis aliquam quam distinctio odit quasi.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Tarjeta 2 -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <img src="images/medicare-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 2">
+          <div class="card-body">
+            <h5 class="card-title">Medicare Supplement</h5>
+            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem saepe quia qui harum accusamus esse, voluptates nam laboriosam porro. Officia sed blanditiis assumenda excepturi similique minus laudantium laborum explicabo corporis.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Tarjeta 3 -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <img src="images/life-insurance-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 3">
+          <div class="card-body">
+            <h5 class="card-title">Life Insurance</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eaque facere obcaecati laudantium commodi ipsum consectetur illum optio ratione minus. Molestias rem sint, maxime officiis quae impedit architecto aliquam. Quos. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <!-- Tarjeta 4 -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <img src="images/medicare-advantage-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 4">
+          <div class="card-body">
+            <h5 class="card-title">Medicare Advantage</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea veniam, consequatur mollitia aut nemo, nobis aperiam illo sunt modi iusto nisi exercitationem vero ipsum molestiae nesciunt? Fugit, autem eius!</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Tarjeta 5 -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <img src="images/obamacare-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 5">
+          <div class="card-body">
+            <h5 class="card-title">ACA/Obamacare</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit doloribus rerum, quis enim rem quae reprehenderit laboriosam expedita accusantium nisi architecto mollitia, molestiae, officiis deserunt iusto vero libero asperiores porro!</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Tarjeta 6 -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <img src="images/short-term-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 6">
+          <div class="card-body">
+            <h5 class="card-title">Short-Term Medical</h5>
+            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, esse repellendus adipisci, quae corporis pariatur unde officiis laboriosam fugit obcaecati, id velit! Laborum velit impedit deleniti magni recusandae, sint ullam!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="custom-container container7">
+    <!-- Sección izquierda con la imagen -->
+    <div class="left-section7">
+        <img src="images/protecting.png" alt="Imagen de trabajadores felices">
+    </div>
+
+    <!-- Sección derecha con el texto y botón -->
+    <div class="right-section7">
+        <h2 class="title-section7">Protecting people, one<br> policy at a time.</h2>
+        <p class="p-section7">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis magnam odit officia veniam non quo aspernatur dolorem sed adipisci, sunt deleniti molestiae culpa quam tempore debitis voluptas exercitationem alias.</p>
+
+        <!-- Contenedor para alinear el botón -->
+        <div class="button_section7_container">
+            <button type="button" class="btn btn-primary boton_header2 ms-3 button_section7">LEARN MORE</button>
+        </div>
+    </div>
+</div>
+
+<!--seccion 8-->
+<div class="container mt-5 container8"></div>
+    <div class="row">
+        <!-- Tarjeta 1 -->
+        <div class="col-md-6 mb-4">
+            <div class="card8">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen 1">
+                <div class="card-body">
+                    <h5 class="card-title8">Health Insurance</h5>
+                    <p class="card-text8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque.</p>
+                    <button class="btn btn-compare">View plans →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="col-md-6 mb-4">
+            <div class="card8">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen 2">
+                <div class="card-body">
+                    <h5 class="card-title8">Life Insurance</h5>
+                    <p class="card-text8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque.</p>
+                    <button class="btn btn-compare">View plans →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="col-md-6 mb-4">
+            <div class="card8">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen 3">
+                <div class="card-body">
+                    <h5 class="card-title8">Medicare Supplement</h5>
+                    <p class="card-text8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque.</p>
+                    <button class="btn btn-compare">View plans →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="col-md-6 mb-4">
+            <div class="card8">
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen 4">
+                <div class="card-body">
+                    <h5 class="card-title8">Medicare Advantage</h5>
+                    <p class="card-text8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque.</p>
+                    <button class="btn btn-compare btn8">View plans →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </html>
+
+
