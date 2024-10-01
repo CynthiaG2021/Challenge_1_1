@@ -1,62 +1,89 @@
-
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 <head>
+    <!-- Metadatos esenciales -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Hoja de estilos personalizada -->
     <link reel="stylesheet" href="estilos.css">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <title>Insurezella</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+    <!--Estilo de la fuente-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+
+    <title>Insurezella</title>
+
+    <style>
+        
+        /* Estilo global para el body */
         body {
             font-family: 'Poppins', sans-serif;
-            font-weight: 520;
+            font-weight: 500;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
         }
 
+        /* Estilo para el header principal */
         .header {
             background-color: #0070f3;
             font-size: 13px;
             margin-bottom: 15px;
             height: auto;
+            
         }
 
+        /* Estilo para el título en el header */
         .header__title {
             font-size: 20px;
             margin-left: 18%;
             font-size: 17px;
         }
 
+        /* Margen para la clase contact en el header */
         .contact {
             margin-right: 9%;
         }
 
+        /* Estilo para el segundo header (blanco) */
         .header2 {
             background-color: white;
             display: flex;
-            height: 50px;
+            height: 20px;
+            padding-bottom: 0px;
+            padding-top: 20px;
+            
         }
 
+        /* Título del segundo header */
         .header__title2 {
             color: #0070f3;
         }
 
+        /* Estilo para los párrafos en secciones específicas */
         .parrafo {
             color: rgb(201, 156, 101);
         }
 
+        /* Estilo para la imagen en el header */
         .img_header {
             height: 50px;
             width: 50px;
             border-radius: 15%;
-            margin-top: 10px;
             margin-left: 7%;
         }
 
+        /* Botón del segundo header */
         .boton_header2 {
             border-radius: 17px !important;
             font-size: 13px !important;
@@ -64,26 +91,25 @@
             font-weight: 562;
             background-color: blue !important;
             margin-right: 5%;
-            transition: background-color 0.5s ease, transform 0.5s ease;
+            
         }
 
-        .boton_header2:hover{
-            background-color: #c5def8;
-    transform: scale(1.1); 
+        
 
-        }
-
+        /* Estilo para los enlaces en la barra de navegación */
         .navbar-nav .nav-link {
-            color: rgb(13, 10, 10); /* Color del texto por defecto */
-            transition: color 0.3s, text-decoration 0.3s; /* Transición suave para el color y el subrayado */
+            color: rgb(13, 10, 10);
+            transition: color 0.3s, text-decoration 0.3s;
             font-size: 13px;
         }
 
+        /* Hover para los enlaces de la barra de navegación */
         .navbar-nav .nav-link:hover {
-            color: #137998; /* Color celeste al pasar el mouse */
-            text-decoration: underline; /* Subraya el texto al pasar el mouse */
+            color: #137998;
+            text-decoration: underline;
         }
 
+        /* Contenedor personalizado */
         .custom-container {
             width: 100%;
             max-width: 1550px;
@@ -95,16 +121,18 @@
             border: 1px solid #ddd;
             background-color: rgb(220, 220, 220);
             position: relative;
-            
         }
 
+        /* Sección izquierda del contenedor */
         .left-section {
-            background-color: rgb(220, 220, 220);
+            background-color: rgb(223, 222, 221);
             color: #0070f3;
             width: 50%;
             padding: 20px;
+
         }
 
+        /* Sección derecha del contenedor con imagen */
         .right-section {
             width: 50%;
             display: flex;
@@ -112,11 +140,13 @@
             align-items: center;
         }
 
+        /* Imagen dentro de la sección derecha */
         .right-section img {
             width: 100%;
             height: 470px;
         }
 
+        /* Título de la sección 3 */
         .title_section3 {  
             font-family: 'Poppins', sans-serif;
             font-size: 2.6rem;
@@ -127,20 +157,20 @@
             display: block;
             background-color: rgb(220, 220, 220);
             color: #007bff;
-            font-weight: bold;
         }
 
+        /* Párrafo de la sección 3 */
         .p_section3 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.0rem;
             margin-bottom: 25px;
             margin-top: 5px;
             line-height: 1.5;
-            color: rgb(158, 141, 119);
+            color: rgb(143, 140, 135);
             margin-left: 20%;
         }
 
-        /* Ajustes para mover el botón a la derecha */
+        /* Contenedor del botón en la sección 3 */
         .button_section3_container {
             display: flex;
             justify-content: flex-end;
@@ -148,476 +178,395 @@
             padding-top: 10px;
         }
 
+        /* Botón en la sección 3 */
         .button_section3 {
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #2f8bec;
             color: white;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             font-weight: bold;
-            transition: background-color 0.5s ease, transform 0.5s ease;
+            margin-right: 170px;
         }
-        
-        .button_section3:hover {        
-    background-color: #c5def8;
-    transform: scale(1.1); 
-}
 
-        
 
-        .section_options{
+        /* Sección de opciones (tarjetas) */
+        .section_options {
             background-color: rgb(255, 255, 255);
-            width:100%;
+            width: 100%;
             max-width: 1000px;
             height: 200px;
-            position: relative;
             font-size: 15px;
-            
+            font-weight: 620;
         }
 
-
-        .col1{
-            width: 155px; 
-    height: 160px; 
-    background-color: #ffffff; 
-    border: 1px solid #ffffff; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-    border-radius: 3px; /* Bordes redondeados */
-    margin-top: 2%;
-    flex-direction: column;
-    text-align: center;
-    transition: background-color 0.5s ease, transform 0.5s ease;
-    margin-left: 10px;
-    
-    
-
-        }
-
-        .col1:hover {
-    background-color: #c5def8;
-    transform: scale(1.1); 
-}
-
-        .col2 {
-            width: 155px; 
-    height: 160px; 
-    background-color: #ffffff; 
-    border: 1px solid #ffffff; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-    border-radius: 3px; /* Bordes redondeados */
-    margin-top: 2%;
-    flex-direction: column;
-    text-align: center;
-    transition: background-color 0.5s ease, transform 0.5s ease;
-    margin-left: 50px;
-        }
-
-        .col2:hover {
-    background-color: #c5def8;
-    transform: scale(1.1); 
-}
-
-        .col3 {
-            width: 155px; 
-    height: 160px; 
-    background-color: #ffffff; 
-    border: 1px solid #ffffff; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-    border-radius: 3px; /* Bordes redondeados */
-    margin-top: 2%;
-    flex-direction: column;
-    text-align: center;
-    transition: background-color 0.5s ease, transform 0.5s ease;
-    margin-left: 50px;
-        }
-
-        .col3:hover {
-    background-color: #c5def8;
-    transform: scale(1.1); 
-}
-
-
-        .col4{
-            width: 155px; 
-    height: 160px; 
-    background-color: #ffffff; 
-    border: 1px solid #ffffff; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-    border-radius: 3px; /* Bordes redondeados */
-    margin-top: 2%;
-    flex-direction: column;
-    text-align: center;
-    transition: background-color 0.5s ease, transform 0.5s ease;
-    margin-left: 50px;
-        }
-
-        .col4:hover {
-    background-color: #c5def8;
-    transform: scale(1.1); 
-}
-
-        .col5{
-            width: 155px; 
-    height: 160px; 
-    background-color: #ffffff; 
-    border: 1px solid #ffffff; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-    border-radius: 3px; /* Bordes redondeados */
-    margin-top: 2%;
-    flex-direction: column;
-    text-align: center;
-    transition: background-color 0.5s ease, transform 0.5s ease;
-    margin-left: 60px;
-        }
-
-        .col5:hover {
-    background-color: #c5def8;
-    transform: scale(1.1); 
-}
-
-
-.img_column{
-            height: 50px;
-            width: 50px;
-            border-radius: 15%;
-            margin-top: 7px;
-            margin-left: 7%;
-            margin-right: 7%;
-            margin-bottom: 7px;
-        }
-
-            .seccion5 {
-                background-color: white;
-                border: none;
-           
-
-           }
-
-        .right_section5 {
-            background-color: rgb(255, 255, 255);
-            width: 50%;
-            padding: 20px;
-            margin-right: 10%;
-        }
-
-
-        .left-section5 {
-            width: 50%;
+        /* Estilo común para las columnas */
+        .col1, .col2, .col3, .col4, .col5 {
+            width: 180px;
+            height: 180px;
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: white;
-        }
-
-        .left-section5 img {
-            width: 70%;
-            height: 450px;
-            background-color: white;
-            margin-left: 30%;
-            
-        }
-        .title_section5 {  
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.3rem;
-            font-weight: bold;
-            margin-bottom: 40px;
-            margin-left: 20%;
-            margin-top: 5%;
-            display: block;
-            background-color: rgb(255, 255, 255);
-            color: #000000;
-            font-weight: bold;
-            margin-left: 60px;
-        }
-
-        .p_section5 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.0rem;
-            margin-bottom: 20px;
-            margin-top: 20px;
-            line-height: 1.5;
-            color: rgb(170, 170, 170);
-            margin-left: 60px;
-        }
-
-        /* Ajustes para mover el botón a la derecha */
-        .button_section5_container {
-            display: flex;
-            justify-content: flex-end;
-            padding-right: 40%;
-            padding-top: 10px;
-            margin-right: 90px;
-            margin-top: 10%;
-            
-        }
-
-        .button_section5 {
-            padding: 10px 40px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 500;
-            
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+            border-radius: 3px;
+            margin-top: 2%;
+            flex-direction: column;
+            text-align: center;
             transition: background-color 0.5s ease, transform 0.5s ease;
+            margin-left: 7px;
+            margin-right: 7px;
         }
-        
-        .button_section5:hover {        
-    background-color: #c5def8;
-    transform: scale(1.1); 
+
+        /* Hover para las columnas */
+        .col1:hover, .col2:hover, .col3:hover, .col4:hover, .col5:hover {
+            background-color: #c5def8;
+            transform: scale(1.1); 
+        }
+
+        /* Imagen dentro de las columnas */
+        .img_column {
+            height: 50px;
+            width: 50px;
+            border-radius: 15%;
+            margin: 7px;
+        }
+
+        /* Sección 5 */
+.seccion5 {
+    background-color: white; /* Color de fondo blanco */
+    border: none; /* Sin borde */
 }
 
+.right_section5 {
+    background-color: rgb(255, 255, 255); /* Color de fondo blanco */
+    width: 50%; /* Ancho del 50% */
+    padding: 20px; /* Espaciado interno de 20px */
+    margin-right: 10%; /* Margen derecho de 10% */
+}
+
+.left-section5 {
+    width: 50%; /* Ancho del 50% */
+    display: flex; /* Usar flexbox para el alineamiento */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    background-color: white; /* Color de fondo blanco */
+}
+
+.left-section5 img {
+    width: 70%; /* Ancho de la imagen al 70% del contenedor */
+    height: 450px; /* Altura fija de 450px */
+    background-color: white; /* Color de fondo blanco */
+    margin-left: 30%; /* Margen izquierdo de 30% */
+}
+
+.title_section5 {  
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+    font-size: 2.3rem; /* Tamaño de fuente 2.3rem */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 40px; /* Margen inferior de 40px */
+    margin-left: 20%; /* Margen izquierdo de 20% */
+    margin-top: 5%; /* Margen superior de 5% */
+    display: block; /* Mostrar como bloque */
+    background-color: rgb(255, 255, 255); /* Color de fondo blanco */
+    color: #000000; /* Color de texto negro */
+    margin-left: 60px; /* Margen izquierdo adicional de 60px */
+}
+
+.p_section5 {
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+    font-size: 1.0rem; /* Tamaño de fuente 1rem */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+    margin-top: 20px; /* Margen superior de 20px */
+    line-height: 1.5; /* Altura de línea de 1.5 */
+    color: rgb(170, 170, 170); /* Color de texto gris */
+    margin-left: 60px; /* Margen izquierdo de 60px */
+}
+
+/* Ajustes para mover el botón a la derecha */
+.button_section5_container {
+    display: flex; /* Usar flexbox para el alineamiento */
+    justify-content: flex-end; /* Alinear el contenido al final (derecha) */
+    padding-right: 40%; /* Espaciado interno derecho de 40% */
+    padding-top: 10px; /* Espaciado interno superior de 10px */
+    margin-right: 90px; /* Margen derecho de 90px */
+    margin-top: 10%; /* Margen superior de 10% */
+}
+
+.button_section5 {
+    padding: 10px 40px; /* Espaciado interno de 10px arriba/abajo y 40px a los lados */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    font-weight: 500; /* Peso de fuente medio */ }
+
+
 .icon_seccion5 {
-    width: 40px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    width: 40px; /* Ancho del icono */
+    margin-left: 10px; /* Margen izquierdo de 10px */
+    margin-bottom: 10px; /* Margen inferior de 10px */
 }
 
 .img_titleseccion5 {
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 0.7;
-    
+    font-size: 12px; /* Tamaño de fuente 12px */
+    display: flex; /* Usar flexbox para el alineamiento */
+    flex-direction: column; /* Alinear verticalmente */
+    justify-content: center; /* Centrar contenido */
+    line-height: 0.7; /* Altura de línea de 0.7 */
 }
 
-.img_medical5{
-    margin-left: 300px;
-    margin-top: -52px;
-    width: 6%;
-    
+.img_medical5 {
+    margin-left: 300px; /* Margen izquierdo de 300px */
+    margin-top: -52px; /* Margen superior negativo de 52px */
+    width: 6%; /* Ancho del 6% */
+}
+
+.img_titlemedical5 {
+    margin-top: -50px; /* Margen superior negativo de 50px */
 
 }
 
-.img_titlemedical5{
-  margin-top: -50px;
+/*seccion 6*/
+
+.img_seccion6{
+    width: 80px !important; /* Ancho de la imagen personalizada */
+    object-fit: contain;
+    margin-top: 70px;
 }
 
-.card-img-custom {
-      width: 70px; /* Cambia el valor para ajustar el tamaño de la imagen */
-      height: 70px; /* Cambia el valor para ajustar el tamaño de la imagen */
-      object-fit: cover;
-      margin-top: 70px;
-      
-      
-      
-    }
+.card-title {
+    font-size: 20px; /* Tamaño de fuente para el título de la tarjeta */
+    font-weight: 700; /* Peso de fuente negrita */
+    color: #0070f3; /* Color azul para el título */
+    margin: 5px 20px; /* Margen de 5px arriba/abajo y 20px a los lados */
+}
 
-    .card-title {
-        font-size: 20px;
-        font-weight: 700;
-        color: #0070f3;
-        margin: 5px 20px;
-    }
+.col-md-4 {
+    background-color: #c8dff7; /* Color de fondo azul claro */
+    padding: 0; /* Sin espaciado interno */
+    margin: 0; /* Sin margen */
+}
 
-    .col-md-4{
-        background-color: #c8dff7;
-        padding: 0;
-        margin: 0;
-        
-        
-        
-        
-    }
+.card {
+    background-color: #dfecfb; /* Color de fondo azul muy claro */
+    border: none; /* Sin borde */
+    width: 100%; /* Ancho completo */
+    height: 100%;
+    margin: 0;
+}
 
+.card-text {
+    color: #a7a9aa; /* Color de texto gris */
+    font-size: 15px; /* Tamaño de fuente 15px */
+    max-width: 300px; /* Ancho máximo de 300px */
+    margin: auto; /* Centrar el margen */
+}
 
-    .card{
-        background-color: #dfecfb;
-        border: none;
-        width: 100%;
-        margin: 0;
-        
-       
-       px
-        
-        
-       
-    }
+.row {
+    margin-left: 0; /* Sin margen izquierdo */
+    margin-right: 0; /* Sin margen derecho */
+    justify-content: center; /* Centrar contenido horizontalmente */
+}
 
-    .card-text {
-        color: #a7a9aa;
-        font-size: 15px;
-        max-width: 300px;
-        margin: auto;
-       
-    }
-
-    .row{
-        margin-left: 0;
-        margin-right: 0;
-        justify-content:center;
-    }
-
-
-       /*seccion 7 protecting people*/
-       .container7 { 
-    background-color: white;
-    border: none;
+/* Sección 7: Protecting People */
+.container7 { 
+    background-color: white; /* Color de fondo blanco */
+    border: none; /* Sin borde */
     display: flex; /* Alinea las secciones lado a lado */
-    justify-content: space-between; /* Separa las dos secciones equitativamente */
+    justify-content: space-between; /* Separa las secciones equitativamente */
     align-items: center; /* Alinea verticalmente al centro */
-    padding: 20px;
-    
+    padding: 20px; /* Espaciado interno de 20px */
 }
 
 .right-section7 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255); /* Color de fondo blanco */
     width: 50%; /* Ocupar la mitad del contenedor */
-    padding: 20px;
-    margin-left: 15px;
-    
+    padding: 20px; /* Espaciado interno de 20px */
+    margin-left: 15px; /* Margen izquierdo de 15px */
 }
 
 .left-section7 {
     width: 50%; /* Ocupar la mitad del contenedor */
-    display: flex;
+    display: flex; /* Usar flexbox para el alineamiento */
     flex-direction: column; /* Alinea el contenido de forma vertical */
-    justify-content: center;
-    padding: 20px;
-    background-color: white;
+    justify-content: center; /* Centrar contenido */
+    padding: 20px; /* Espaciado interno de 20px */
+    background-color: white; /* Color de fondo blanco */
 }
 
 .left-section7 img {
-    width: 75%; /* Ajustar la imagen al 100% del contenedor izquierdo */
+    width: 75%; /* Ajustar la imagen al 75% del contenedor */
     height: auto; /* Mantener la proporción de la imagen */
-    margin-left: 20%;
+    margin-left: 20%; /* Margen izquierdo de 20% */
 }
 
 .title-section7 {  
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.3rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #000000;
-    font-weight: bold;
-    margin-left: 0px;
-    
-    
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+    font-size: 2.3rem; /* Tamaño de fuente 2.3rem */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 30px; /* Margen inferior de 30px */
+    color: #000000; /* Color de texto negro */
+    margin-left: 0px; /* Sin margen izquierdo */
 }
 
 .p-section7 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.0rem;
-    margin-bottom: 25px;
-    margin-top: 10px;
-    line-height: 1.5;
-    color: rgb(170, 170, 170);
-    font-weight: 450;
-    margin-left: 0px;
-    margin-right: 80px;
+    font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+    font-size: 1.0rem; /* Tamaño de fuente 1rem */
+    margin-bottom: 25px; /* Margen inferior de 25px */
+    margin-top: 10px; /* Margen superior de 10px */
+    line-height: 1.5; /* Altura de línea de 1.5 */
+    color: rgb(170, 170, 170); /* Color de texto gris */
+    font-weight: 450; /* Peso de fuente normal */
+    margin-left: 0px; /* Sin margen izquierdo */
+    margin-right: 80px; /* Margen derecho de 80px */
 }
 
 .button_section7_container {
-    display: flex;
+    display: flex; /* Usar flexbox para el alineamiento */
     justify-content: flex-start; /* Alinear el botón a la izquierda dentro de la sección derecha */
-    margin-top: 30px;
-    margin-left: -15px;
+    margin-top: 30px; /* Margen superior de 30px */
+    margin-left: -15px; /* Margen izquierdo negativo de 15px */
 }
 
 .button_section7 {
-    padding: 10px 40px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.5s ease, transform 0.5s ease;
-    width: 250px;
-    
+    padding: 10px 40px; /* Espaciado interno de 10px arriba/abajo y 40px a los lados */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 50px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    font-weight: 500; /* Peso de fuente medio */
+    width: 250px; /* Ancho del botón de 250px */
 }
 
-.button_section7:hover {        
-    background-color: #c5def8;
-    transform: scale(1.1); 
-}
 
 
 .container8 {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas */
-    justify-content: center; /* Centra horizontalmente las tarjetas */
-    align-items: center;
-    padding: 20px; /* Espaciado interno del contenedor */
+    background-color: #ffffff; /* Fondo blanco */
+    display: flex; /* Usar flexbox */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: center; /* Centrar contenido */
+    padding: 0px; /* Sin espaciado interno */
+    margin: 20px 20px; /* Margen de 20px alrededor */
+    width: 100%; /* Ancho completo */
+    height: 50%; /* Altura del 50% */
 }
 
-.card8 {
-    width: 400px; /* Ancho de las tarjetas */
-   
-    margin: 15px; /* Espacio entre tarjetas */
-    margin-left: 20%;
-    margin-right: 20%;
+.card8 { 
+    background-color: white; /* Fondo blanco para la tarjeta */
+    border: none; /* Sin borde */
+    transition: transform 0.3s; /* Efecto de transición suave */
+    height: 95%; /* Altura del 95% */
+    width: 80%; /* Ancho del 80% */
+    margin-left: 80px; /* Margen izquierdo de 80px */
+    margin-right: 80px; /* Margen derecho de 80px */
 }
 
-.card {
-    border: none; /* Sin borde en las tarjetas */
-    transition: transform 0.3s; /* Suaviza el efecto al pasar el mouse */}
-    
+.card8:hover {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el mouse */
+}
 
-.card:hover {
-    transform: scale(1.05); /* Agranda la tarjeta al pasar el mouse */
+.card-img-top {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+.card-body {
+    padding: 30px; /* Espaciado interno de 30px */
+    text-align: center; /* Centra el contenido de la tarjeta */
+}
+
+.card-title8 {
+    font-size: 25px; /* Tamaño de fuente 25px */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 20px; /* Margen inferior de 20px */
+    margin: 20px 20px; /* Margen de 20px en todos los lados */
+}
+
+.card-text8 {
+    font-size: 16px; /* Tamaño de fuente 16px */
+    color: #aeaaaa; /* Color de texto gris */
+    margin: 20px 20px; /* Margen de 20px en todos los lados */
 }
 
 .btn-compare {
-    display: flex;
-    bottom: 10px;
-    left: 10px;
-    background-color: #ffffff; /* Color de fondo del botón */
-    color: #007bff; /* Color del texto del botón */
+    color: #4775a7; /* Color del texto del botón */
     border: none; /* Sin borde */
-    border-radius: 5px; /* Esquinas redondeadas */
-    padding: 10px 20px; /* Espaciado interno */
-    transition: transform 0.3s; /* Suaviza el efecto al pasar el mouse */
+    padding: 0px 0px; /* Sin espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 200px; /* Ancho del botón de 200px */
+    height: 80px; /* Altura del botón de 80px */
+    margin: 20px 20px; /* Margen de 20px en todos los lados */
 }
 
-.btn-compare:hover {
-    transform: scale(1.1); /* Agranda el botón al pasar el mouse */
-    background-color: #eeeff1; /* Cambia el color de fondo al pasar el mouse */
+
+.img3 {
+    height: 57%; /* Altura del 57% */
 }
 
-.card-title8{
-    margin-left:100px;
-    margin-right: 100px;
-    margin-top: 20px;
-    font-size: 25px;
-    font-weight: bold;
-    
+/* Última sección */
+.bg-light {
+    background-color: #f8f9fa !important; /* Color de fondo gris claro */
+    width: 80%; /* Ancho del 80% */
+    z-index: 1; /* Asegurar que está en el frente */
+    position: relative; /* Posición relativa */
 }
 
-.card-text8{
-    color: #aeaaaa;
-    font-size:20px ;
-    margin-top: 20px;
-    font-weight: 400;
+h5 {
+    font-weight: bold; /* Texto en negrita */
 }
 
-.btn8{
-    color: #007bff;
+a {
+    color: #a19c9c; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
 }
 
+a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+ul {
+    padding-left: 0; /* Sin espaciado a la izquierda */
+}
+
+ul li {
+    list-style: none; /* Sin estilo de lista */
+    margin-bottom: 10px; /* Margen inferior de 10px */
+    color: #aeaaaa; /* Color de texto gris */
+    font-weight: 400; /* Peso de fuente normal */
+    font-size: 15px; /* Tamaño de fuente 15px */
+}
+
+.fab, .fas {
+    margin-right: 8px; /* Margen derecho de 8px para iconos */
+}
+
+.img9 {
+    border-radius: 15px; /* Bordes redondeados de 15px */
+}
+
+.p9 {
+    color: #aeaaaa; /* Color de texto gris */
+}
+
+footer {
+    position: relative; /* Posición relativa */
+    bottom: 0; /* Alinear al fondo */
+    width: 100%; /* Ancho completo */
+    background-color: #007bff; /* Color de fondo azul */
+}
+
+.footer {
+    z-index: 0; /* Asegurar que está detrás de otros elementos */
+}
 
     </style>
-
 </head>
+
 <body>
     <div class="container-fluid text-white d-flex justify-content-between align-items-center header">
         <span class="header__title">Want to Connect with us?</span>
@@ -628,7 +577,7 @@
     </div>
 
     <div class="container-fluid text-white d-flex justify-content-between align-items-center header2">
-        <img class="img_header" src="images/logo.png" alt="logo insurezella">
+        <img id="Imagen1" class="img_header" src="images/logo.png" alt="logo insurezella">
         <nav class="navbar navbar-expand">
             <div class="container-fluid d-flex justify-content-center">
                 <ul class="navbar-nav">
@@ -647,13 +596,13 @@
                 </ul>
             </div>
         </nav>
-        <button type="button" class="btn btn-primary boton_header2 ms-3">Call Us Now ➜</button>
+        <button class="btn btn-primary boton_header2 ms-3">Call Us Now ➜</button>
     </div>
 
     <div class="custom-container">
         <div class="left-section">
             <h2 class="title_section3">YOUR GUIDE TO QUALITY COVERAGE</h2>
-            <p class="p_section3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis magnam odit officia veniam non quo aspernatur dolorem sed adipisci, sunt deleniti molestiae culpa quam tempore debitis voluptas exercitationem alias.</p>
+            <p class="p_section3" >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis magnam odit officia veniam non quo aspernatur dolorem sed adipisci, sunt deleniti molestiae culpa quam tempore debitis voluptas exercitationem alias.</p>
 
             <!-- Contenedor para alinear el botón a la derecha -->
             <div class="button_section3_container">
@@ -669,11 +618,11 @@
    <!--seccion4--> 
    <div class="container text-center section_options">
     <div class="row row-cols-5 columns_options">
-      <div class="col1"><img class="img_column" src="images/health-insurance-icon.png" alt="logo insurezella">Health Insurance</div>
-      <div class="col2"><img class="img_column" src="images/medicare-advantage-icon.png" alt="logo insurezella">Medicare Supplement</div>
-      <div class="col3"><img class="img_column" src="images/medicare-icon.png" alt="logo insurezella">Medicare Advantage</div>
-      <div class="col4"><img class="img_column" src="images/obamacare-icon.png" alt="logo insurezella">Life insurance</div>
-      <div class="col5"><img class="img_column" src="images/short-term-icon.png" alt="logo insurezella">ACA obamacare</div>
+      <div class="col1"><img class="img_column" src="images/health-insurance-icon.png" alt="logo insurezella">Health<br> Insurance</div>
+      <div class="col2"><img class="img_column" src="images/medicare-advantage-icon.png" alt="logo insurezella">Medicare<br> Supplement</div>
+      <div class="col3"><img class="img_column" src="images/medicare-icon.png" alt="logo insurezella">Medicare<br> Advantage</div>
+      <div class="col4"><img class="img_column" src="images/obamacare-icon.png" alt="logo insurezella">Life<br>insurance</div>
+      <div class="col5"><img class="img_column" src="images/short-term-icon.png" alt="logo insurezella">ACA<br>obamacare</div>
     </div>
   </div>
 
@@ -720,7 +669,7 @@
       <!-- Tarjeta 1 -->
       <div class="col-md-4">
         <div class="card text-center">
-          <img src="images/health-insurance-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 1">
+          <img src="images/health-insurance-icon.png" class="card-img-top mx-auto card-img-custom img_seccion6" alt="Imagen 1">
           <div class="card-body">
             <h5 class="card-title">Health Insurance</h5>
             <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut suscipit perspiciatis, omnis quo, ipsum atque, quaerat maiores eum architecto reiciendis eligendi alias eos voluptatibus! Debitis aliquam quam distinctio odit quasi.</p>
@@ -731,7 +680,7 @@
       <!-- Tarjeta 2 -->
       <div class="col-md-4">
         <div class="card text-center">
-          <img src="images/medicare-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 2">
+          <img src="images/medicare-icon.png" class="card-img-top mx-auto card-img-custom img_seccion6" alt="Imagen 2">
           <div class="card-body">
             <h5 class="card-title">Medicare Supplement</h5>
             <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem saepe quia qui harum accusamus esse, voluptates nam laboriosam porro. Officia sed blanditiis assumenda excepturi similique minus laudantium laborum explicabo corporis.</p>
@@ -742,7 +691,7 @@
       <!-- Tarjeta 3 -->
       <div class="col-md-4">
         <div class="card text-center">
-          <img src="images/life-insurance-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 3">
+          <img src="images/life-insurance-icon.png" class="card-img-top mx-auto card-img-custom img_seccion6" alt="Imagen 3">
           <div class="card-body">
             <h5 class="card-title">Life Insurance</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eaque facere obcaecati laudantium commodi ipsum consectetur illum optio ratione minus. Molestias rem sint, maxime officiis quae impedit architecto aliquam. Quos. </p>
@@ -755,7 +704,7 @@
       <!-- Tarjeta 4 -->
       <div class="col-md-4">
         <div class="card text-center">
-          <img src="images/medicare-advantage-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 4">
+          <img src="images/medicare-advantage-icon.png" class="card-img-top mx-auto card-img-custom img_seccion6" alt="Imagen 4">
           <div class="card-body">
             <h5 class="card-title">Medicare Advantage</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ea veniam, consequatur mollitia aut nemo, nobis aperiam illo sunt modi iusto nisi exercitationem vero ipsum molestiae nesciunt? Fugit, autem eius!</p>
@@ -766,7 +715,7 @@
       <!-- Tarjeta 5 -->
       <div class="col-md-4">
         <div class="card text-center">
-          <img src="images/obamacare-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 5">
+          <img src="images/obamacare-icon.png" class="card-img-top mx-auto card-img-custom img_seccion6" alt="Imagen 5">
           <div class="card-body">
             <h5 class="card-title">ACA/Obamacare</h5>
             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit doloribus rerum, quis enim rem quae reprehenderit laboriosam expedita accusantium nisi architecto mollitia, molestiae, officiis deserunt iusto vero libero asperiores porro!</p>
@@ -777,7 +726,7 @@
       <!-- Tarjeta 6 -->
       <div class="col-md-4">
         <div class="card text-center">
-          <img src="images/short-term-icon.png" class="card-img-top mx-auto card-img-custom" alt="Imagen 6">
+          <img src="images/short-term-icon.png" class="card-img-top mx-auto card-img-custom img_seccion6" alt="Imagen 6">
           <div class="card-body">
             <h5 class="card-title">Short-Term Medical</h5>
             <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, esse repellendus adipisci, quae corporis pariatur unde officiis laboriosam fugit obcaecati, id velit! Laborum velit impedit deleniti magni recusandae, sint ullam!</p>
@@ -796,7 +745,7 @@
     <!-- Sección derecha con el texto y botón -->
     <div class="right-section7">
         <h2 class="title-section7">Protecting people, one<br> policy at a time.</h2>
-        <p class="p-section7">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis magnam odit officia veniam non quo aspernatur dolorem sed adipisci, sunt deleniti molestiae culpa quam tempore debitis voluptas exercitationem alias.</p>
+        <p class="p-section7">We are committed to delivering the highest standards of protection,tallored to meet the unique needs of each individual and familiy. Our dedicated team of professionals works tirelessly to offer comprehensive insurance solutions that not only safeguard your assets but also offer you the support and assistance you need in times of uncertainty.</p>
 
         <!-- Contenedor para alinear el botón -->
         <div class="button_section7_container">
@@ -805,62 +754,162 @@
     </div>
 </div>
 
-<!--seccion 8-->
-<div class="container mt-5 container8"></div>
-    <div class="row">
-        <!-- Tarjeta 1 -->
-        <div class="col-md-6 mb-4">
-            <div class="card8">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen 1">
-                <div class="card-body">
-                    <h5 class="card-title8">Health Insurance</h5>
-                    <p class="card-text8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque.</p>
-                    <button class="btn btn-compare">View plans →</button>
-                </div>
+<div class="row row-cols-1 row-cols-md-2 g-4 container8">
+    <div class="col">
+        <div class="card8">
+            <img src="images/doctor.jpg" class="card-img-top" alt="Doctor">
+            <div class="card-body">
+                <h5 class="card-title8">Health Insurance</h5>
+                <p class="card-text8">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="btn-compare">
+                <button type="button" class="btn btn-primary ms-3">Compare Plans →</button>
             </div>
         </div>
+    </div>
 
-        <!-- Tarjeta 2 -->
-        <div class="col-md-6 mb-4">
-            <div class="card8">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen 2">
-                <div class="card-body">
-                    <h5 class="card-title8">Life Insurance</h5>
-                    <p class="card-text8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque.</p>
-                    <button class="btn btn-compare">View plans →</button>
-                </div>
+    <div class="col">
+        <div class="card8">
+            <img src="images/family-together.jpg" class="card-img-top" alt="Familia">
+            <div class="card-body">
+                <h5 class="card-title8">Life Insurance</h5>
+                <p class="card-text8">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="btn-compare">
+                <button type="button" class="btn btn-primary ms-3">Compare Plans →</button>
             </div>
         </div>
+    </div>
 
-        <!-- Tarjeta 3 -->
-        <div class="col-md-6 mb-4">
-            <div class="card8">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen 3">
-                <div class="card-body">
-                    <h5 class="card-title8">Medicare Supplement</h5>
-                    <p class="card-text8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque.</p>
-                    <button class="btn btn-compare">View plans →</button>
-                </div>
+    <div class="col">
+        <div class="card8">
+            <img src="images/medical-appointment.jpg" class="card-img-top img3" alt="Apoyo de medicos">
+            <div class="card-body">
+                <h5 class="card-title8">Medicare Supplement</h5>
+                <p class="card-text8">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="btn-compare">
+                <button type="button" class="btn btn-primary ms-3">Compare Plans →</button>
             </div>
         </div>
+    </div>
 
-        <!-- Tarjeta 4 -->
-        <div class="col-md-6 mb-4">
-            <div class="card8">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Imagen 4">
-                <div class="card-body">
-                    <h5 class="card-title8">Medicare Advantage</h5>
-                    <p class="card-text8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, neque.</p>
-                    <button class="btn btn-compare btn8">View plans →</button>
-                </div>
+    <div class="col">
+        <div class="card8">
+            <img src="images/man-signing.jpg" class="card-img-top" alt="Hombre firmando">
+            <div class="card-body">
+                <h5 class="card-title8">Medicare Advantage</h5>
+                <p class="card-text8">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="btn-compare">
+                <button type="button" class="btn btn-primary ms-3">Compare Plans →</button>
             </div>
         </div>
     </div>
 </div>
 
+<!--ultima seccion-->
+
+<div class="container-fluid bg-light py-4">
+    <div class="row text-center text-md-left">
+      
+      <!-- Primera columna: Logo e información -->
+      <div class="col-md-3">
+        <img src="images/logo.png" alt="Logo" class="img-fluid mb-3 img9" style="max-width: 80px;">
+        <p class="p9">"Discover the Peace of Mind You Deserve with Insurezella Your Reliable Insurance Umbrella"</p>
+        <!-- Íconos de redes sociales -->
+        <div class="d-flex justify-content-center justify-content-md-start">
+          <a href="#" class="me-3"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#" class="me-3"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+  
+      <!-- Segunda columna: Servicios -->
+      <div class="col-md-3">
+        <h5>Services</h5>
+        <ul class="list-unstyled">
+          <li>Health Insurance</li>
+          <li>Life Insurance</li>
+          <li>Medicare Supplement</li>
+          <li>Medicare Advantage</li>
+          <li>(ACA) Obamacare</li>
+        </ul>
+      </div>
+  
+      <!-- Tercera columna: Compañía -->
+      <div class="col-md-3">
+        <h5>Company</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Industry news</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+  
+      <!-- Cuarta columna: Contacto -->
+      <div class="col-md-3">
+        <h5>Get In Touch</h5>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-envelope"></i> Email: support@insurezella.com</li>
+          <li><i class="fas fa-phone"></i> Tel: +18772270774</li>
+          <li><i class="fas fa-clock"></i> Mon-Fri 9:00AM - 5:00PM</li>
+          <li><i class="fas fa-map-marker-alt"></i> 300 SE 2nd Street Suite 600, Ft. Lauderdale FL 33301</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="bg-primary text-white text-center py-3">
+    <div class="container footer">
+    </div>
+  </footer>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+// Selecciona la imagen
+const imagen = document.getElementById('Imagen1');
+
+// Agrega un evento de clic a la imagen
+imagen.addEventListener('click', function() {
+    // Cambia el tamaño de la imagen
+    if (imagen.style.transform === "scale(1.5)") {
+        imagen.style.transform = "scale(1)";
+    } else {
+        imagen.style.transform = "scale(1.5)";
+    }
+});
+
+
+// Mensaje emergente al hacer clic en ciertos botones (ej. FIND PLANS)
+const botonFindPlans = document.querySelector('.button_section3');
+botonFindPlans.addEventListener('click', function() {
+    alert('Thank you for your interest! We will guide you through the best plans.');
+});
+
+
+// Efecto de escala en los botones al pasar el ratón (hover)
+const botones = document.querySelectorAll('button');
+botones.forEach(boton => {
+    boton.addEventListener('mouseover', function() {
+        boton.style.transform = "scale(1.1)";
+        boton.style.transition = "transform 0.2s ease-in-out";
+    });
+    boton.addEventListener('mouseout', function() {
+        boton.style.transform = "scale(1)";
+    });
+});
+
+
+</script>
+
+
 </html>
+
+
 
 
